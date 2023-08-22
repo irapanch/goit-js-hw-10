@@ -10,9 +10,100 @@ body {
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
+  width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
+
+
+/* ================ CATS =============== */
 img {
   display: block;
+  width: 500px;
+  height: 300px;
   max-width: 100%;
+  border-radius: 5%;
+  box-shadow: 0px 0px 10px 0px #888888;
+}
+.breed-select {
+    padding: 5px 10px;
+    margin-bottom: 50px;
+}
+.cat-info {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin: 50px auto;
+  
+}
+
+
+.title {
+  margin-bottom: 30px;
+  color: maroon;
+  font-size: 30px;
+  text-align: center;
+  
+
+}
+
+.description {
+  text-indent: 5%;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.temperament {
+  font-style: italic;
+  font-weight: 600;
+  color:brown;
+  text-align: center;
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  border-width: 3px;
+  border-style: dashed solid solid dotted;
+  border-color: #FF3D00 #FF3D00 transparent #FF3D00;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 20px;
+  top: 31px;
+  border: 10px solid transparent;
+  border-right-color: #FF3D00;
+  transform: rotate(-40deg);
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.is-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
